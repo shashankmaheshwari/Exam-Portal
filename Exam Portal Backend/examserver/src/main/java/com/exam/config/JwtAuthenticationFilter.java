@@ -22,15 +22,17 @@ import io.jsonwebtoken.ExpiredJwtException;
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
-	@Autowired
-	private UserDetailsServiceImpl userDetailsService;
 
-	@Autowired
-	private JwtUtils jwtUtil;
+    @Autowired
+    private UserDetailsServiceImpl userDetailsService;
 
-	@Override
-	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
-			throws ServletException, IOException {
+    @Autowired
+    private JwtUtils jwtUtil;
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+
+
         final String requestTokenHeader = request.getHeader("Authorization");
         System.out.println(requestTokenHeader);
         String username = null;
@@ -60,6 +62,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             final UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
             if (this.jwtUtil.validateToken(jwtToken, userDetails)) {
                 //token is valid
+
                 UsernamePasswordAuthenticationToken usernamePasswordAuthentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                 usernamePasswordAuthentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
                 SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthentication);
@@ -71,12 +74,9 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         filterChain.doFilter(request, response);
 
     }
-		
-		
-		
-		
-		
-		
-	}
+
+
+}
+
 
 
