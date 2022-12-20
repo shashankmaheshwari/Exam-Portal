@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="nav-col">
     <a  routerLink="/" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu_book</mat-icon>
     </a>
@@ -8,12 +8,44 @@
         Home
            
     </a>
-    <a  [routerLink]="'/login'" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <a 
+     *ngIf="!isLoggedIn"
+     [routerLink]="'/login'" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
      Login
         
     </a>
-    <a [routerLink]="'/signup'" mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
+
+    <a 
+    *ngIf="isLoggedIn && user && user.authorities[0].authority ==adminRole" 
+    routerLink="/admin/profile"
+     mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
+      {{user.username }}
+     
+      
+           
+    </a>
+    <a 
+    *ngIf="isLoggedIn && user && user.authorities[0].authority ==userRole" 
+    routerLink="/user-dashboard/profile"
+     mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
+      {{user.username }}
+      
+      
+      
+           
+    </a>
+    
+    <a 
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/signup'" mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
         Register
+           
+    </a>
+    <a 
+    (click)="logout()"
+    *ngIf="isLoggedIn"
+     mat-icon-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
+        Logout
            
     </a>
 
