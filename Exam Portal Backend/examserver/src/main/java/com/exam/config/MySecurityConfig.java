@@ -38,11 +38,11 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 	}
  
 	
-	/////// change it to bcrypt 
+	
 	@Bean
-	public PasswordEncoder passwordEncoder() {
+	public BCryptPasswordEncoder passwordEncoder() {
 		// TODO Auto-generated method stub
-		return NoOpPasswordEncoder.getInstance();
+		return new BCryptPasswordEncoder();
 	}
 
 	@Override
