@@ -65,7 +65,8 @@ public class UserController {
 		this.userService.deleteUser(userId);
 	}
 	 @ExceptionHandler(UserFoundException.class)
-	    public ResponseEntity<?> exceptionHandler(UserFoundException ex) {
+	    //changes made on delete user
+	 public ResponseEntity<?> exceptionHandler(UserFoundException ex) {
 	        return ResponseEntity.ok(ex.getMessage());
 	    }
 
