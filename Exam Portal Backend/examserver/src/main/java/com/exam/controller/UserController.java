@@ -66,6 +66,7 @@ public class UserController {
 	}
 	 @ExceptionHandler(UserFoundException.class)
 	    //changes made on delete user
+	 // changes made on branch 01 user
 	 public ResponseEntity<?> exceptionHandler(UserFoundException ex) {
 	        return ResponseEntity.ok(ex.getMessage());
 	    }

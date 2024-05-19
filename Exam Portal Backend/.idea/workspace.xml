@@ -13,21 +13,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "shashankmaheshwari"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;shashankmaheshwari&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/shashankmaheshwari/Exam-Portal.git",
-    "accountId": "1d97b071-cd3a-4757-b2b7-ce71c37e0435"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/shashankmaheshwari/Exam-Portal.git&quot;,
+    &quot;accountId&quot;: &quot;1d97b071-cd3a-4757-b2b7-ce71c37e0435&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2gYa6IZvimKJglIOghEBe5qrAfI" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -38,8 +38,9 @@
     "Maven.Project.executor": "Run",
     "Maven.Unnamed.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Branch01",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Applications/Projects/Exam-Portal/Exam Portal Backend",
+    "last_opened_file_path": "/Users/shashankmaheshwari/Downloads/Branch01/Exam Portal Backend",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -110,9 +111,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Maven.Project" />
       <item itemvalue="Maven.Unnamed (1)" />
       <item itemvalue="Maven.Unnamed" />
+      <item itemvalue="Maven.Project" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
